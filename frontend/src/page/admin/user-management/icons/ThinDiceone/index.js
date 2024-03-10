@@ -1,0 +1,1 @@
+export { ThinDiceone } from "./ThinDiceone";

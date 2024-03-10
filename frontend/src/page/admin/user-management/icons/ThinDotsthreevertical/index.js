@@ -1,0 +1,1 @@
+export { ThinDotsthreevertical } from "./ThinDotsthreevertical";

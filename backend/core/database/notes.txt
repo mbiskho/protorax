@@ -1,0 +1,3 @@
+# Running Mysql on Docker Server
+
+docker run --name adji -e MYSQL_ROOT_PASSWORD=propen-adji -p 3306:3306 -d mysql
