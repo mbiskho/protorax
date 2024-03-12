@@ -29,7 +29,7 @@ const AddUser = () => {
         id_school: form.school,
       };
 
-      fetch(`${API.local}/user`, {
+      fetch(`${API.server}/user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

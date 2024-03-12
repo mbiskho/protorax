@@ -35,7 +35,7 @@ const EditUser = () => {
       };
 
       console.log(payload);
-      fetch(`${API.local}/user/${id}`, {
+      fetch(`${API.server}/user/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const EditUser = () => {
   const fetchData = async () => {
     const path = location.pathname.split("/");
     const id = path[path.length - 1];
-    const response = await axios.get(`${API.local}/user/${id}`);
+    const response = await axios.get(`${API.server}/user/${id}`);
     setForm(response.data[0]);
   };
 

@@ -84,7 +84,7 @@ const UserManagement = () => {
    * Functions
    */
   const fetchUsers = async () => {
-    const response = await axios.get(`${API.local}/user`);
+    const response = await axios.get(`${API.server}/user`);
     setUsers(response.data);
     setLoading(false);
   };
@@ -101,7 +101,7 @@ const UserManagement = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         setUpdate(true);
-        fetch(`${API.local}/user/${id}`, {
+        fetch(`${API.server}/user/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
