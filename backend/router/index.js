@@ -20,6 +20,7 @@ const AnnouncementService = require('../app/service/announcement.service')
 router.get("/user", wrap(UserService.listUsers));
 router.post("/user", wrap(UserService.createUser))
 router.put("/user/:id", wrap(UserService.updateUser))
+router.get('/user/:id', wrap(UserService.getUser))
 router.delete("/user/:id", wrap(UserService.deleteUser))
 
 /**
