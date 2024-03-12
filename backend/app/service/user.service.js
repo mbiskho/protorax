@@ -5,37 +5,39 @@ const { UserModel } = require("../../core/model");
 
 
 const UserService = {
-  async autenticate(req, res) {
-    const { username, password } = req.body;
-    const user = await UserRepository.autenticate(username);
+    async autenticate(req, res) {
+        const { username, password } = req.body;
+        const user = await UserRepository.autenticate(username);
 
-    const passwordIsValid = password === user.password;
-    if (!passwordIsValid) {
-      return res.status(401).json({ status: 401, message: "Invalid Password" });
-    }
+        const passwordIsValid = password === user.password;
+        if (!passwordIsValid) {
+            return res
+                .status(401)
+                .json({ status: 401, message: "Invalid Password" });
+        }
 
-    if (!user) {
-      res.status(404).json({
-        status: 404,
-        message: "Maaf user belum terdaftar",
-      });
-    }
+        if (!user) {
+            res.status(404).json({
+                status: 404,
+                message: "Maaf user belum terdaftar",
+            });
+        }
 
-    const token = jwt.sign(
-      {
-        id: user.id,
-        username: user.username,
-        name: user.username,
-        role: user.role,
-        gender: user.gender,
-        password: user.password, 
-        id_school: user.id_school
-      },
-      "BACKEND",
-      {
-        expiresIn: 86400, // expires in 24 hours
-      }
-    );
+        const token = jwt.sign(
+            {
+                id: user.id,
+                username: user.username,
+                name: user.username,
+                role: user.role,
+                gender: user.gender,
+                password: user.password,
+                id_school: user.id_school,
+            },
+            "BACKEND",
+            {
+                expiresIn: 86400, // expires in 24 hours
+            }
+        );
 
     res.status(200).json({ token: token, user: user });
   },
@@ -48,27 +50,27 @@ const UserService = {
     }
   },
 
-  async createUser(req, res) {
-    try {
-      const user = {
-        username: req.body.username,
-        password: req.body.password,
-        name: req.body.name,
-        role: req.body.role,
-        gender: req.body.gender,
-        id_school: req.body.id_school
-      }
+    async createUser(req, res) {
+        try {
+            const user = {
+                username: req.body.username,
+                password: req.body.password,
+                name: req.body.name,
+                role: req.body.role,
+                gender: req.body.gender,
+                id_school: req.body.id_school,
+            };
 
-      const newUser = await UserRepository.createUser(user)
-      if (!newUser)
-        res.status(500).json({
-          message: "User fail to create"
-        })
-      res.status(200).json(newUser);
-    } catch (error) {
-      res.status(500).send(error);
-    }
-  },
+            const newUser = await UserRepository.createUser(user);
+            if (!newUser)
+                res.status(500).json({
+                    message: "User fail to create",
+                });
+            res.status(200).json(newUser);
+        } catch (error) {
+            res.status(500).send(error);
+        }
+    },
 
   async updateUser(req, res) {
     try {
@@ -103,6 +105,14 @@ const UserService = {
     }
   },
 
+    async deleteUser(req, res) {
+        try {
+            await UserRepository.deleteUser(req.params.id);
+            res.status(200).send({ message: "User deleted successfully" });
+        } catch (error) {
+            res.status(500).send({ message: "Error deleting user" });
+        }
+    },
 };
 
 module.exports = UserService;
