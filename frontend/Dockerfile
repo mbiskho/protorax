@@ -1,22 +1,20 @@
-# Use Node.js LTS version as the base image
+# Use an official Node runtime as a parent image
 FROM node:latest
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if available) to the working directory
+# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the entire project to the working directory
+# Copy all files from the current directory to the working directory in the container
 COPY . .
 
-# Expose port 80
+# Expose port 3000 to the outside world
 EXPOSE 3000
 
-# Command to start the React app
-# CMD ["npm", "run", "prod"]
+# Command to run the npm start script
 CMD ["npm", "start"]
-# CMD ["npm","run","start:both"]
