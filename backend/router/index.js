@@ -36,11 +36,11 @@ router.delete("/user/:id", wrap(UserService.deleteUser))
 /**
  * Course management
  */
-router.get("/courses", authorize, CourseService.listCourses);
-router.get("/courses/:id", CourseService.getCourse);
-router.post("/courses", upload.single("photo"), CourseService.createCourse);
-router.put("/courses/:id", upload.single("photo"), CourseService.updateCourse);
-router.delete("/courses/:id", CourseService.deleteCourse);
+router.get("/courses", wrap(CourseService.listCourses));
+router.get("/courses/:id", wrap(CourseService.getCourse));
+router.post("/courses", upload.single("photo"), wrap(CourseService.createCourse));
+router.put("/courses/:id", upload.single("photo"), wrap(CourseService.updateCourse));
+router.delete("/courses/:id", wrap(CourseService.deleteCourse));
 router.get("/courses", wrap(CourseService.listCourses));
 router.get("/courses/:id", wrap(CourseService.getCourse));
 router.post("/courses", upload.single("photo"), wrap(CourseService.createCourse));
