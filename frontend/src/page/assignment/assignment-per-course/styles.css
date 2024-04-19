@@ -1,0 +1,78 @@
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 100px;
+  }
+  
+  .upper{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .upper button{
+    align-items: center;
+    background-color: var(--variable-collection-primary-700);
+    border: 1.19px solid;
+    border-color: transparent;
+    border-radius: 9.55px;
+    display: flex;
+    padding: 9.55px;
+    position: relative;
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16.7px;
+    padding: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    height: 50px;
+    margin: auto 0px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  
+  }
+  
+  .upper p{
+    font-family: var(--heading-02-font-family);
+    font-size: var(--heading-02-font-size);
+    font-style: var(--heading-02-font-style);
+    font-weight: var(--heading-02-font-weight);
+  }
+  
+  .action-container{
+    display: flex;
+    gap: 10px;
+  
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+  .assignment{
+    max-height: 300px; /* Atur tinggi maksimal sesuai kebutuhan */
+    overflow:hidden;
+    line-height: 24px;
+}
+
+  .read-assignment {
+    margin-top: 35px;
+    display: flex;
+    justify-content:flex-end;
+    font-size: 12px;
+}
+
+    .read-assignment button {
+    margin-right: 10px; /* Memberikan jarak sebesar 10px di sebelah kanan setiap tombol */
+}
+
+.column-assignment {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  justify-content:flex-end;
+  vertical-align:middle;
+  margin-bottom: 25px;
+}

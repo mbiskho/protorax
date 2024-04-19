@@ -1,0 +1,202 @@
+.navbar-guru-pelajar {
+	height: 96px;
+	/* width: 1440px; */
+}
+
+.navbar-guru-pelajar .overlap-group {
+	/* height: 96px; */
+	position: relative;
+}
+
+.navbar-guru-pelajar .frame {
+	background-color: var(--variable-collection-primary-500);
+	height: 96px;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar-guru-pelajar .navbar-item {
+	height: 24px;
+	left: 260px;
+	position: absolute;
+	top: 36px;
+	width: 227px;
+}
+
+.navbar-guru-pelajar .div {
+	align-items: flex-start;
+	display: inline-flex;
+	gap: 33px;
+	position: relative;
+}
+
+.navbar-guru-pelajar .text-wrapper {
+	color: #ffffff;
+	font-family: 'Inter', Helvetica;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 24px;
+	margin-top: -1px;
+	position: relative;
+	white-space: nowrap;
+	width: fit-content;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.navbar-guru-pelajar .text-wrapper:hover {
+	color: rgba(222, 226, 230, 0.75);
+}
+
+å .navbar-guru-pelajar .group {
+	height: 20px;
+	left: 1105px;
+	position: absolute;
+	top: 38px;
+	width: 299px;
+}
+
+.navbar-guru-pelajar .group-wrapper {
+	height: 20px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 167px;
+}
+
+.navbar-guru-pelajar .group-2 {
+	height: 20px;
+	position: relative;
+}
+
+.navbar-guru-pelajar .help {
+	align-items: center;
+	display: inline-flex;
+	gap: 4px;
+	justify-content: center;
+	left: 24px;
+	position: absolute;
+	top: 0;
+}
+
+.navbar-guru-pelajar .question-fill {
+	height: 20px;
+	position: relative;
+	width: 20px;
+}
+
+.navbar-guru-pelajar .text-wrapper-3 {
+	color: var(--variable-collection-primary-100);
+	font-family: 'SF Pro Text-Regular', Helvetica;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 16px;
+	position: relative;
+	white-space: nowrap;
+	width: fit-content;
+}
+
+.navbar-guru-pelajar .line {
+	height: 20px;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 1px;
+}
+
+.navbar-guru-pelajar .notification-fill {
+	height: 20px;
+	left: 103px;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+
+.navbar-guru-pelajar .settings-fill {
+	height: 20px;
+	left: 147px;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+
+.navbar-guru-pelajar .group-3 {
+	height: 20px;
+	left: 191px;
+	position: absolute;
+	top: 0;
+	width: 108px;
+}
+
+.navbar-guru-pelajar .group-4 {
+	height: 20px;
+	left: 16px;
+	position: absolute;
+	top: 0;
+	width: 94px;
+}
+
+.navbar-guru-pelajar .arrow-down-s-line {
+	height: 16px;
+	left: 76px;
+	position: absolute;
+	top: 2px;
+	width: 16px;
+}
+
+.navbar-guru-pelajar .avatar {
+	height: 20px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+
+.navbar-guru-pelajar .text-wrapper-4 {
+	color: var(--variable-collection-primary-100);
+	font-family: 'Inter', Helvetica;
+	font-size: 14px;
+	font-weight: 400;
+	height: 16px;
+	left: 32px;
+	letter-spacing: 0;
+	line-height: 16px;
+	position: absolute;
+	text-align: center;
+	top: 2px;
+	white-space: nowrap;
+}
+
+.navbar-guru-pelajar .logo-container {
+	margin: auto 10px;
+}
+.navbar-guru-pelajar .logo-HD-plego {
+	width: 202px;
+}
+
+.left-item {
+	display: flex;
+}
+
+.right-item {
+	display: flex;
+	color: white;
+	align-items: center;
+	gap: 10px;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: white;
+	padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}

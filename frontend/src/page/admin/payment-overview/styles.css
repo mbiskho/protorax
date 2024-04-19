@@ -1,0 +1,16 @@
+.payment-table {
+    
+    margin-top: 10px;
+    background-color: rgb(250, 250, 250);  /* Matches the original background color */
+    width: 100%;
+    display: table;
+    table-layout: fixed; /* Ensures content fills the table width */
+    border-collapse: collapse; /* Removes borders between table cells */
+  }
+  
+  .payment-table th,
+  .payment-table td {
+    border-bottom: 1px solid #ddd; /* Adds borders to table cells */
+    padding: 8px; /* Padding for readability */
+  }
+  

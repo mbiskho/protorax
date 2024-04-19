@@ -1,0 +1,54 @@
+.footer {
+    position:static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+  .content {
+    background-color: #1C4A78;
+    padding: 20px 20px 0px 20px;
+    padding-left: 40px;
+    font-size: 12px;
+  }
+
+.copyright {
+    background-color: #FFFFFF;
+    height: 35px;
+    padding-left: 40px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membuat 3 kolom dengan lebar yang sama */
+    gap: 70px;
+    color: white;
+    justify-content: space-between;
+  }
+
+.column{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom dengan lebar yang sama */
+    gap: 10px; /* Jarak antar kolom */
+    color: white;
+    justify-content: space-between;
+}
+
+.box {
+    background-color: #F0C232;
+    width: 25%;
+    padding: 15px 15px 15px 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+@media (max-width: 750px) {
+    .box {
+        width: 50%;
+    }
+}

@@ -1,0 +1,26 @@
+.add-payment-btn {
+    margin-top: 10;
+    background-color: #1C4A78; /* Green shade to match the success message */
+    color: white;
+    padding: 0.20rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    display: inline-block;
+    margin-right: 0.5rem; /* For spacing if next to another button */
+  }
+  
+  .add-payment-btn:hover {
+    background-color: #1C4A80; /* Slightly darker on hover */
+  }
+  
+  .add-payment-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  }
+  

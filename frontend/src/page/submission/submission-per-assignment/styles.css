@@ -1,0 +1,101 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#delete-button {
+  align-items: center;
+  /* background-color: var(--variable-collection-primary-700); */
+  background-color: #ba0428;
+  border: 1.19px solid;
+  border-color: transparent;
+  border-radius: 9.55px;
+  display: flex;
+  position: relative;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px;
+  height: 50px;
+  margin: auto 0px;
+  position: relative;
+  width: fit-content;
+}
+
+#edit-button {
+  align-items: center;
+  background-color: var(--variable-collection-primary-700);
+  border: 1.19px solid;
+  border-color: transparent;
+  border-radius: 9.55px;
+  display: flex;
+  position: relative;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px;
+  height: 50px;
+  margin: auto 0px;
+  position: relative;
+  width: fit-content;
+}
+
+.header p {
+  font-family: var(--heading-02-font-family);
+  font-size: var(--heading-02-font-size);
+  font-style: var(--heading-02-font-style);
+  font-weight: var(--heading-02-font-weight);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: auto;
+  gap: 10px;
+}
+
+.detail {
+  background-color: #e9eaf0;
+  padding: 30px;
+  height: auto;
+}
+
+.author {
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: flex-start;
+}
+
+.individual-submission table {
+  width: 100%; /* Menetapkan lebar tabel menjadi 100% dari lebar kontainer */
+  border-collapse: collapse; /* Menggabungkan batas antar sel */
+}
+th,
+td {
+  border: 1px solid grey; /* Menetapkan garis batas untuk sel */
+  padding: 8px; /* Padding di dalam sel */
+  text-align: left; /* Posisi teks di dalam sel */
+}
+.column1 {
+  width: 10%; /* Lebar kolom pertama */
+}
+.column2 {
+  width: 20%; /* Lebar kolom kedua */
+}
+.column3 {
+  width: 20%; /* Lebar kolom pertama */
+}
+.column4 {
+  width: 40%; /* Lebar kolom kedua */
+}
+.column5 {
+  width: 10%; /* Lebar kolom pertama */
+}
+.table .badge {
+  color: white; /* Mengatur warna teks menjadi putih */
+}
