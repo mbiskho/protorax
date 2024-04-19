@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 import "./styles.css";
+import API from '../../constants/api';
 
 const Auth = () => {
   // States
@@ -19,7 +20,7 @@ const Auth = () => {
       password: e.target[1].value,
     };
 
-    fetch(`http://127.0.0.1:8000/login`, {
+    fetch(`${API.used}/login`, {
       method: "POST",
       headers: {  
         "Content-Type": "application/json",

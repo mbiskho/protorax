@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  # React app service
+  react-app:
+    # Build the Dockerfile in the current directory
+    build: .
+    # Expose port 80 of the container to port 80 on the host
+    ports:
+      - "80:80"
+      - "3000:3000"
+    # Enable hot-reloading by mounting the project directory into the container
+    volumes:
+      - .:/app
+    # Restart the service if it stops for any reason
+    restart: unless-stopped
