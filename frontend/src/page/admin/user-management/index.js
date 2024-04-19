@@ -44,7 +44,7 @@ const UserManagement = () => {
           >
             Delete
           </button>
-          <button type="button" class="btn btn-outline-warning" onClick={()=>{window.location.assign(`/user-management/update/${row.id}`)}}>
+          <button type="button" class="btn btn-outline-warning" onClick={()=>{window.location.assign(`/users/${row.id}/update`)}}>
             Edit
           </button>
         </div>
@@ -159,7 +159,7 @@ const UserManagement = () => {
             type="button"
             class="btn btn-primary"
             onClick={() => {
-              window.location.assign("/user-management/add");
+              window.location.assign("/users/add");
             }}
           >
             + Add User

@@ -52,7 +52,7 @@ const AddUser = () => {
           });
 
           setTimeout(() => {
-            window.location.assign("/user-management");
+            window.location.assign("/users");
           }, [1500]);
         })
         .catch((error) => {
@@ -70,8 +70,6 @@ const AddUser = () => {
 
   return (
     <div>
-      <Navbar />
-
       <div className="wrapper">
         <form onSubmit={handleSubmit}>
           <div className="form-group" style={{ marginBottom: "10px" }}>

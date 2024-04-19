@@ -22,7 +22,8 @@ const EditUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const path = location.pathname.split("/");
-    const id = path[path.length - 1];
+    const id = path[path.length - 2];
+    console.log(id);
     try {
       setLoading(true);
       const payload = {
@@ -56,7 +57,7 @@ const EditUser = () => {
           });
 
           setTimeout(() => {
-            window.location.assign("/user-management");
+            window.location.assign("/users");
           }, [1500]);
         })
         .catch((error) => {
@@ -74,7 +75,7 @@ const EditUser = () => {
 
   const fetchData = async () => {
     const path = location.pathname.split("/");
-    const id = path[path.length - 1];
+    const id = path[path.length - 2];
     const response = await axios.get(`${API.used}/user/${id}`);
     setForm(response.data[0]);
   };
@@ -84,8 +85,6 @@ const EditUser = () => {
   }, []);
   return (
     <div>
-      <Navbar />
-
       <div className="wrapper">
         <form onSubmit={handleSubmit}>
           <div className="form-group" style={{ marginBottom: "10px" }}>

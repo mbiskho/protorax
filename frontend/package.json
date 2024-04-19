@@ -31,10 +31,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"start:port3000": "react-scripts start --port 3000",
-		"start:port80": "react-scripts start --port 80",
-		"start:both": "npm-run-all -p start:port3000 start:port80"
+		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
 		"extends": [
